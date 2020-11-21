@@ -86,6 +86,15 @@
               else
               telError.textContent="Incorrect Mobile No.";
          })
+         const pass=document.querySelector('#pwd');
+         const passError=document.querySelector('.pass-error');
+         pass.addEventListener('input', function(){
+             let passRegex= new RegExp(/^.*(?=.{8,}$)/);
+             if(passRegex.test(pass.value))
+              passError.textContent="";
+              else
+              passError.textContent="Password is incorrect";
+         })
          const salary=document.querySelector('#salary');
          const output=document.querySelector('.salary-output');
          output.textContent=salary.value;
