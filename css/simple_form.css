@@ -1,42 +1,63 @@
-.headerContainer{
+.headerContainer {
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    background: tomato;
+    background: gold;
     font-weight: bold;
     padding: 2opx;
+    margin: 0 0 1em ;
 }
- 
-form{
+
+body {
+    padding: 0 20em 0 20em;
+    border: 1em;
+    background: rgba(13, 154, 236, 0.39);
+}
+input::placeholder{
+  text-align: center;  
+}
+form {
     margin-top: 50px;
 }
- 
-div{
-    margin-bottom: 20px;
+
+div {
+    margin-bottom: 0px;
+    padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgb(183, 105, 255);
 }
- 
-label, input, button{
+.textClass,.emailClass,.numClass,.searchClass,.dateClass{
+    background: deepskyblue;
+}
+.submitClass{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.submitButton{
+    background-color: gold;
+}
+label,
+input,
+button {
     font-size: 16px;
     line-height: 1.5;
 }
- 
-label{
+
+label {
     text-align: right;
     width: 30%;
     margin-right: 2%;
 }
- 
-input{
-    flex:auto;
+
+input {
+    flex: auto;
 }
- 
-error-output{
+
+error-output {
     font-size: 12px;
     font-style: italic;
     color: red;
 }
-
-

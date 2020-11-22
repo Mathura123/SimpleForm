@@ -1,107 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic input types</title>
     <link rel="stylesheet" href="../css/simple_form.css">
- 
 </head>
+
 <body>
     <form>
-        <header class="headerContainer"><h1>HTML 5 Form Input Fields</h1></header>
-        <div>
-        <label for="text">text input type for Name:</label>
-        <input type="text" id="text" name="text">
-        <error-output class="text-error" for="text"></error-output>
-    </div>
-    <div>
-        <label for="pwd">Password input type: </label>
-        <input type="password" id="pwd" name="pwd" required>
-        <error-output class="pass-error" for="pwd"></error-output>
-    </div>
-    <div>
-        <label for="email">email input type:</label>
-        <input type="email" id="email" name="email">
-        <error-output class="email-error" for="email"></error-output>
-    </div>
-   <div>
-       <label for="url">url input type:</label>
-       <input type="url" id="url" name="url">
-   </div>
-<div>
-    <label for="number">number input type:</label>
-    <input type="number" id="number" name="number">
-</div>
-<div>
-    <label for="tel">tel input type:</label>
-    <input type="tel" id="tel" name="tel">
-    <error-output class="tel-error" for="tel"></error-output>
-</div>
-      <div>
-          <label for="search">Search input type: </label>
-          <input type="search" id="search" name="search">
- 
+        <header class="headerContainer">
+            <h1>HTML 5 Form Input Fields</h1>
+        </header>
+        <div class="textClass">
+            <label for="text">Your Name:</label>
+            <input type="text" id="text" name="text" placeholder="Your name" required>
+            <error-output class="text-error" for="text"></error-output>
+        </div>
+        <div class="passClass">
+            <label for="pwd">Password input: </label>
+            <input type="password" id="pwd" name="pwd" placeholder="Your Password eg. Pass$123" required>
+            <error-output class="pass-error" for="pwd"></error-output>
+        </div>
+        <div class="emailClass">
+            <label for="email">Email input:</label>
+            <input type="email" id="email" name="email" placeholder="Your email eg. name@abc.com">
+            <error-output class="email-error" for="email"></error-output>
+        </div>
+        <div class="urlCLass">
+            <label for="url">URL input :</label>
+            <input type="url" id="url" name="url" placeholder="Give any URL">
+        </div>
+        <div class="numClass">
+            <label for="number">Number input :</label>
+            <input type="number" id="number" name="number">
+        </div>
+        <div class="telClass">
+            <label for="tel">Tel input :</label>
+            <input type="tel" id="tel" name="tel">
+            <error-output class="tel-error" for="tel"></error-output>
+        </div>
+        <div class="searchClass">
+            <label for="search">Search input box: </label>
+            <input type="search" id="search" name="search" placeholder="Write anything to search">
         </div>
         <div class="nativeDateTimePicker">
-         <label for="startDate">Choose a date and time:</label>
-         <input type="datetime-local" id="startDate" name="startDate">
-         <span class="validity"></span>
+            <label for="startDate">Choose a date and time:</label>
+            <input type="datetime-local" id="startDate" name="startDate">
+            <span class="validity"></span>
         </div>
-        <div>
+        <div class="dateClass">
             <label for="salary">Choose your salary</label>
             <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
             <output class="salary-output" for="salary">400000</output>
         </div>
-        <div>
-            <button>submit</button>
+        <div class="submitClass">
+            <button class="submitButton">Submit</button>
         </div>
     </form>
     <script>
-         
-         const text=document.querySelector('#text');
-         const textError=document.querySelector('.text-error');
-         text.addEventListener('input', function(){
-             let namRegex= new RegExp(/^[A-Z][a-z]{2,}$/);
-             if(namRegex.test(text.value))
-              textError.textContent="";
-              else
-              textError.textContent="Name is incorrect";
-         })
-         const email=document.querySelector('#email');
-         const emailError=document.querySelector('.email-error');
-         email.addEventListener('input', function(){
-             let emailRegex= new RegExp(/^[a-zA-z0-9]+([-.+_][a-zA-Z0-9]+)*[@][a-zA-z0-9]+([.][a-zA-z]{2,}){1,2}$/);
-             if(emailRegex.test(email.value))
-              emailError.textContent="";
-              else
-              emailError.textContent="Email is incorrect";
-         })
-         const tel=document.querySelector('#tel');
-         const telError=document.querySelector('.tel-error');
-         tel.addEventListener('input', function(){
-             let telRegex= new RegExp(/^[0-9]+[ ][1-9][0-9]{9}$/);
-             if(telRegex.test(tel.value))
-              telError.textContent="";
-              else
-              telError.textContent="Incorrect Mobile No.";
-         })
-         const pass=document.querySelector('#pwd');
-         const passError=document.querySelector('.pass-error');
-         pass.addEventListener('input', function(){
-             let passRegex= new RegExp(/^.*(?=.{8,}$)/);
-             if(passRegex.test(pass.value))
-              passError.textContent="";
-              else
-              passError.textContent="Password is incorrect";
-         })
-         const salary=document.querySelector('#salary');
-         const output=document.querySelector('.salary-output');
-         output.textContent=salary.value;
-         salary.addEventListener('input',function(){
-             output.textContent=salary.value;
-         })
+        const text = document.querySelector('#text');
+        const textError = document.querySelector('.text-error');
+        text.addEventListener('input', function () {
+            let namRegex = new RegExp(/^[A-Z][a-z]{2,}$/);
+            if (namRegex.test(text.value))
+                textError.textContent = "";
+            else
+                textError.textContent = "Name is incorrect";
+        })
+        const email = document.querySelector('#email');
+        const emailError = document.querySelector('.email-error');
+        email.addEventListener('input', function () {
+            let emailRegex = new RegExp(
+                /^[a-zA-z0-9]+([-.+_][a-zA-Z0-9]+)*[@][a-zA-z0-9]+([.][a-zA-z]{2,}){1,2}$/);
+            if (emailRegex.test(email.value))
+                emailError.textContent = "";
+            else
+                emailError.textContent = "Email is incorrect";
+        })
+        const tel = document.querySelector('#tel');
+        const telError = document.querySelector('.tel-error');
+        tel.addEventListener('input', function () {
+            let telRegex = new RegExp(/^[0-9]+[ ][1-9][0-9]{9}$/);
+            if (telRegex.test(tel.value))
+                telError.textContent = "";
+            else
+                telError.textContent = "Incorrect Mobile No.";
+        })
+        const pass = document.querySelector('#pwd');
+        const passError = document.querySelector('.pass-error');
+        pass.addEventListener('input', function () {
+            let passRegex = new RegExp(
+                /^.*(?=.{8,}$)(?=.*[A-Z])(?=.*[0-9])(?=^[A-Za-z0-9]*[^a-zA-Z0-9][A-Za-z0-9]*$)/);
+            if (passRegex.test(pass.value))
+                passError.textContent = "";
+            else
+                passError.textContent = "Password is incorrect";
+        })
+        const salary = document.querySelector('#salary');
+        const output = document.querySelector('.salary-output');
+        output.textContent = salary.value;
+        salary.addEventListener('input', function () {
+            output.textContent = salary.value;
+        })
     </script>
 </body>
-</html>
 
+</html>
