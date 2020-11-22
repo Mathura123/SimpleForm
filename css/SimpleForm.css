@@ -9,7 +9,7 @@
 }
 
 body {
-    padding: 0 20em 0 20em;
+    padding: 0 15em 0 15em;
     border: 1em;
     background: rgba(13, 154, 236, 0.39);
 }
@@ -71,3 +71,21 @@ error-output {
     font-style: italic;
     color: red;
 }
+
+@media only screen and (max-device-width: 1000px) {
+    body {
+        padding: 0 2em 0 2em;
+    }
+  }
+  
+@media only screen and (max-device-width: 600px) {
+    input{
+        width: 50%;
+    }
+    label{
+        width: 40%;
+    }
+    h1{
+        font-size: medium;
+    }
+  }
