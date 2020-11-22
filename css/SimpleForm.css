@@ -5,7 +5,7 @@
     background: gold;
     font-weight: bold;
     padding: 2opx;
-    margin: 0 0 1em ;
+    margin: 0 0 1em;
 }
 
 body {
@@ -13,9 +13,11 @@ body {
     border: 1em;
     background: rgba(13, 154, 236, 0.39);
 }
-input::placeholder{
-  text-align: center;  
+
+input::placeholder {
+    text-align: center;
 }
+
 form {
     margin-top: 50px;
 }
@@ -26,19 +28,27 @@ div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(183, 105, 255);
+    background: rgba(210, 28, 255, 0.562);
 }
-.textClass,.emailClass,.numClass,.searchClass,.dateClass{
+
+.textClass,
+.emailClass,
+.numClass,
+.searchClass,
+.dateClass {
     background: deepskyblue;
 }
-.submitClass{
+
+.submitClass {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.submitButton{
+
+.submitButton {
     background-color: gold;
 }
+
 label,
 input,
 button {
